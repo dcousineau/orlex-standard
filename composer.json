@@ -1,0 +1,26 @@
+{
+    "name": "dcousineau/orlex-standard",
+    "license": "MIT",
+    "type": "project",
+    "description": "A full-fledged Orlex distribution with nice extras",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "silex/silex": "~1.0",
+        "dcousineau/orlex": "dev-master",
+        "twig/twig": "~1.8",
+        "symfony/twig-bridge": "~2.2",
+        "symfony/validator": "~2.2",
+        "symfony/translation": "~2.2",
+        "symfony/form": "~2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev"
+}

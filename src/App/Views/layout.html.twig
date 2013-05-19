@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Orlex Standard Distribution Hello World{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+{% for flash_type in ['error', 'warning', 'success'] %}
+    {% if app.session.getFlashBag.has(flash_type) %}
+        {% for flash in app.session.getFlashBag.get(flash_type) %}
+            <div class="alert alert-{{ flash_type }}">
+                {{ flash | raw }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+
+{% block body %}{% endblock %}
+
+{% block javascript %}{% endblock %}
+</body>
+</html>

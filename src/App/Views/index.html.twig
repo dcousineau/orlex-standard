@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Welcome to Orlex | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Orlex!</h1>
+
+    {% if app.session.has('username') %}
+        <h2>You are logged in as {{ app.session.get('username') }}</h2>
+        <p>Please <a href="{{ path("logout") }}">Logout</a></p>
+    {% else %}
+        <p>Please Login:</p>
+        <form method="POST" action="{{ path("login") }}">
+            {{ form_widget(form) }}
+            <button type="submit">Save</button>
+        </form>
+    {% endif %}
+{% endblock %}
