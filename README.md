@@ -2,7 +2,7 @@ Orlex Standard Distribution
 ===
 
 The Orlex Standard Distribution is a project installable through [Composer](http://getcomposer.org) that provides a skeleton
-application utilizing Orlex as well as projects like [Twig]() and [Symfony Forms]().
+application utilizing Orlex as well as projects like [Twig](http://twig.sensiolabs.org/) and [Symfony Forms](http://symfony.com/doc/master/book/forms.html).
 
 Installation
 ---
