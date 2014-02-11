@@ -23,7 +23,7 @@ class IndexController {
      * @Route("/",methods={"GET","POST"},name="index")
      */
     public function indexAction() {
-        $form = $this->createForm(new Form\LoginForm());
+        $form = $this->createBuilder(new Form\LoginForm())->getForm();
 
         return $this->render("index.html.twig", [
             'form' => $form->createView(),
@@ -37,7 +37,7 @@ class IndexController {
         /** @var $request \Symfony\Component\HttpFoundation\Request */
         $request = $this->get('request');
 
-        $form = $this->createForm(new Form\LoginForm());
+        $form = $this->createBuilder(new Form\LoginForm())->getForm();
 
         if ('POST' == $request->getMethod()) {
             $form->submit($request);
